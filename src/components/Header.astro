@@ -1,7 +1,19 @@
 ---
 import ThemeToggle from "../components/ThemeToggle.astro"
+import GithubIcon from "../components/icons/Github.astro"
+import Badge from "../components/Badge.astro"
 ---
 
-<nav>
-    <ThemeToggle />
-</nav>
+<header class="fixed top-0 py-5 px-10 w-full mx-auto bg-black-900">
+    <nav class="flex justify-between items-center">
+        <h3 class="text-white-500/70 font-bold text-xl">RaidrUI</h3>
+        <div class="flex gap-x-6 items-center text-white-500/70">
+            <a href="" class="">Componentes</a>
+            <Badge>Apoya este proyecto!</Badge>
+            <a href="" class="hover:scale-125 transition">
+                <GithubIcon class="size-5"/>
+            </a>
+            <ThemeToggle />
+        </div>
+    </nav>
+</header>
