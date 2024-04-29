@@ -1,0 +1,43 @@
+---
+import SectionContainer from "../../../components/SectionContainer.astro";
+import TailwindBadge from "../../../components/TailwindBadge.astro";
+import LayoutDocs from "../../../layouts/LayoutDocs.astro";
+import ShowCase from "../../../components/ShowCase.astro";
+import PlusIcon from "../../../components/icons/Plus.astro";
+---
+
+<LayoutDocs title="RaidrUI | Docs - Get Started" description="Get Started">
+    <main class="px-4 w-full">
+		<SectionContainer class="py-20 md-py-36 flex flex-col gap-y-4">
+			<h1 class="text-4xl font-bold text-start">Buttons</h1>
+			<TailwindBadge />
+			<p class="text-gray-400">Buttons allow users to perform actions and choose with a single tap.</p>
+			<h2 class="text-2xl font-bold">Usage</h2>
+			<ShowCase>
+				<button class="inline-flex items-center justify-center gap-2 px-4 py-2 space-x-2 text-base text-black dark:text-white transition bg-gray-200 hover:bg-gray-300 dark:bg-gray-800  dark:hover:bg-gray-700/80 dark:hover:border-gray-900 group max-w-fit rounded-xl dark:hover:text-white">Primary</button>
+			</ShowCase>
+			<h2 class="text-2xl font-bold mt-4">Icon + Text Button</h2>
+			<ShowCase>
+				<button class="inline-flex items-center justify-center gap-2 px-4 py-2 space-x-2 text-base text-black dark:text-white transition bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 text-md dark:hover:bg-gray-700/80 dark:hover:border-gray-900 group max-w-fit rounded-xl dark:hover:text-white">
+					<PlusIcon class="size-4"/>  <!-- Use your custome Icon here -->
+					Add filter
+				</button>
+			</ShowCase>
+			<h2 class="text-2xl font-bold mt-4">Disabled Button</h2>
+			<ShowCase>
+				<button class="inline-flex items-center justify-center gap-2 px-4 py-2 space-x-2 text-base cursor-not-allowed text-black dark:text-white transition bg-gray-200 dark:bg-gray-800 group max-w-fit rounded-xl ">Disabled</button>
+			</ShowCase>
+			<h2 class="text-2xl font-bold mt-4">Icon Button</h2>
+			<ShowCase>
+				<button class="inline-flex items-center justify-center gap-2 px-4 py-4 space-x-2 text-base text-black dark:text-white transition bg-gray-200 hover:bg-gray-300 dark:bg-gray-800  dark:hover:bg-gray-700/80 dark:hover:border-gray-900 group max-w-fit rounded-xl dark:hover:text-white">
+					<PlusIcon class="size-4"/> <!-- Use your custome Icon here -->
+				</button>
+			</ShowCase>
+			<h2 class="text-2xl font-bold mt-4">Outline Button</h2>
+			<ShowCase>
+				<button class="inline-flex items-center justify-center gap-2 px-4 py-2 space-x-2 text-base text-black dark:text-white transition border bg-transparent hover:bg-gray-200/20 dark:bg-transparent  dark:hover:bg-gray-200/10  group max-w-fit rounded-xl dark:hover:text-white">
+					Primary
+				</button>
+			</ShowCase>
+		</SectionContainer>
+</LayoutDocs>

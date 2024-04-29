@@ -1,17 +1,22 @@
 ---
-import ThemeToggle from "../components/ThemeToggle.astro"
-import GithubIcon from "../components/icons/Github.astro"
-import Badge from "../components/Badge.astro"
+import ThemeToggle from "../components/ThemeToggle.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import Badge from "../components/Badge.astro";
 ---
 
-<header class="fixed top-0 py-5 px-10 w-full mx-auto bg-black-900">
+<header class="fixed top-0 py-5 px-10 w-full mx-auto bg-white dark:bg-black">
     <nav class="flex justify-between items-center">
-        <h3 class="text-white-500/70 font-bold text-xl">RaidrUI</h3>
-        <div class="flex gap-x-6 items-center text-white-500/70">
-            <a href="" class="">Componentes</a>
-            <Badge>Apoya este proyecto!</Badge>
-            <a href="" class="hover:scale-125 transition">
-                <GithubIcon class="size-5"/>
+        <a href="/" class="dark:text-white font-bold text-xl">RaidrUI</a>
+        <div class="flex gap-x-6 items-center dark:text-gray-400">
+            <a href="/docs/components/buttons" class="hover:text-blue-500">Components</a>
+            <Badge>Support this project!</Badge>
+            <a
+                href="https://github.com/RaidrDev/raidr-ui"
+                class="hover:text-blue-500 hover:scale-125 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <GithubIcon class="size-5" />
             </a>
             <ThemeToggle />
         </div>

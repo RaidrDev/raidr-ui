@@ -1,8 +1,23 @@
 ---
+import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
+import ComponentsIcon from "../components/icons/Components.astro";
 ---
 
 <Layout title="RaidrUI" description="">
-	<main>
+	<main class="px-4 w-full h-full">
+		<SectionContainer class="h-screen py-20 md-py-36">
+			<div class="w-full h-full flex flex-col items-center justify-center gap-y-10">
+				<h1 class="text-8xl font-bold text-center">RaidrUI</h1>
+				<p class="text-center text-gray-500 text-pretty">Start developing with an open-source library of over 600+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.</p>
+				<div class="flex flex-col mb-8 md:flex-row lg:justify-center">
+					<a href="/docs/get-started" class="text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 focus:ring-4 focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-medium rounded-lg text-base px-6 py-2.5 text-center md:mr-5 mb-3 md:mb-0 inline-flex items-center justify-center">Get started</a>
+					<a href="/docs/components/buttons" class="text-gray-900 bg-white-100 hover:bg-gray-100 hover:text-blue-700 border border-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-600 dark:bg-gray-800 font-medium rounded-lg text-base px-6 py-2.5 text-center inline-flex justify-center items-center gap-x-3">
+						<ComponentsIcon class="size-5" />
+						Explore Components</a>
+				</div>
+
+			</div>
+		</SectionContainer>
 	</main>
 </Layout>
