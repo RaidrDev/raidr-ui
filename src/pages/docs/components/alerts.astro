@@ -11,12 +11,83 @@ import ShowCase from "../../../components/ShowCase.astro";
 			<h1 class="text-4xl font-bold text-start">Alerts</h1>
 			<TailwindBadge />
 			<p class="text-gray-400">The alert component can be used to provide information to your users such as success or error messages, but also highlighted information complementing the normal flow of paragraphs and headers on a page.</p>
-			<h2 class="text-2xl font-bold">Usage</h2>
+            <h2 class="text-2xl font-bold">Positioning</h2>
+            <p class="text-gray-400">Use the <u>fixed</u> class from Tailwind CSS to position these alerts components <b>relative</b> to the main content wrapper element from your document:</p>
+            <ul class="list-disc ml-10">
+                <li class="text-gray-400">Top left: fixed top-5 left-5</li>
+                <li class="text-gray-400">Top right: fixed top-5 right-5</li>
+                <li class="text-gray-400">Bottom left: fixed bottom-5 left-5</li>
+                <li class="text-gray-400">Bottom right: fixed bottom-5 right-5</li>
+            </ul>
+			<h2 class="text-2xl font-bold">Alert success</h2>
 			<ShowCase>
-				<span class="inline-flex items-center justify-center gap-2 px-4 py-1 space-x-2 text-sm text-black dark:text-white transition bg-gray-200 dark:bg-gray-800 group max-w-fit rounded-full">Primary</span>
-				<span class="inline-flex items-center justify-center gap-2 px-4 py-1 space-x-2 text-sm text-green-800 dark:text-green-300 transition bg-green-200 dark:bg-green-800 group max-w-fit rounded-full">Green</span>
-				<span class="inline-flex items-center justify-center gap-2 px-4 py-1 space-x-2 text-sm text-yellow-800 dark:text-yellow-300 transition bg-yellow-200 dark:bg-yellow-800 group max-w-fit rounded-full">Yellow</span>
-				<span class="inline-flex items-center justify-center gap-2 px-4 py-1 space-x-2 text-sm text-red-800 dark:text-red-300 transition bg-red-200 dark:bg-red-800 group max-w-fit rounded-full">Red</span>
+                <div id="toast-default" class="flex items-center w-full max-w-fit px-4 py-3 text-green-900 bg-green-400/30 rounded-md shadow dark:text-green-500 dark:bg-green-400/30" role="alert">
+                    <div class="inline-flex items-center justify-center flex-shrink-0 size-4 text-white bg-green-600/80 rounded-full dark:bg-green-800 dark:text-green-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 256 256"><path d="M243.31,90.91l-128.4,128.4a16,16,0,0,1-22.62,0l-71.62-72a16,16,0,0,1,0-22.61l20-20a16,16,0,0,1,22.58,0L104,144.22l96.76-95.57a16,16,0,0,1,22.59,0l19.95,19.54A16,16,0,0,1,243.31,90.91Z"></path></svg>
+                        <span class="sr-only">Add icon</span>
+                    </div>
+                    <span class="px-4 mr-4 text-sm font-normal">Element added successfully</span>
+                    <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-green-600 rounded-lg focus:ring-2 focus:ring-green-600 p-1.5 hover:bg-green-500/20 inline-flex items-center justify-center size-7 dark:text-green-500 dark:bg-transparent dark:hover:bg-green-500/10 " data-dismiss-target="#toast-default" aria-label="Close">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                    </button>
+                </div>
+			</ShowCase>
+            <h2 class="text-2xl font-bold">Alert warning</h2>
+			<ShowCase>
+                <div id="toast-default" class="flex items-center w-full max-w-fit px-4 py-3 text-yellow-800 bg-yellow-300/20 rounded-md shadow dark:text-yellow-500 dark:bg-yellow-200/30" role="alert">
+                    <div class="inline-flex items-center justify-center flex-shrink-0 size-5 text-yellow-600 rounded-full dark:text-yellow-200">
+                       <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-alert-triangle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></svg>
+                        <span class="sr-only">Warning icon</span>
+                    </div>
+                    <span class="px-4 mr-4 text-sm font-normal">You have no credits left. <u>Upgrade your account to add more credits.</u></span>
+                    <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-yellow-600 rounded-lg focus:ring-2 focus:ring-yellow-600 dark:focus:ring-yellow-200 p-1.5 hover:bg-yellow-500/20 inline-flex items-center justify-center size-7 dark:text-yellow-200 dark:bg-transparent dark:hover:bg-yellow-500/10 " data-dismiss-target="#toast-default" aria-label="Close">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                    </button>
+                </div>
+			</ShowCase>
+            <h2 class="text-2xl font-bold">Alert info</h2>
+			<ShowCase>
+                <div id="toast-default" class="flex items-center w-full max-w-fit px-4 py-3 text-blue-800 bg-blue-300/20 rounded-md shadow dark:text-blue-500 dark:bg-blue-300/30" role="alert">
+                    <div class="inline-flex items-center justify-center flex-shrink-0 size-5 text-blue-400 rounded-full dark:text-blue-200">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-info-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm0 9h-1l-.117 .007a1 1 0 0 0 0 1.986l.117 .007v3l.007 .117a1 1 0 0 0 .876 .876l.117 .007h1l.117 -.007a1 1 0 0 0 .876 -.876l.007 -.117l-.007 -.117a1 1 0 0 0 -.764 -.857l-.112 -.02l-.117 -.006v-3l-.007 -.117a1 1 0 0 0 -.876 -.876l-.117 -.007zm.01 -3l-.127 .007a1 1 0 0 0 0 1.986l.117 .007l.127 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z" /></svg>
+                        <span class="sr-only">Info icon</span>
+                    </div>
+                    <span class="px-4 mr-4 text-sm font-normal">A new software update is available. See what’s new in version 2.0.4.</span>
+                    <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-blue-600 rounded-lg focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-200 p-1.5 hover:bg-blue-500/20 inline-flex items-center justify-center size-7 dark:text-blue-200 dark:bg-transparent dark:hover:bg-blue-500/10 " data-dismiss-target="#toast-default" aria-label="Close">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                    </button>
+                </div>
+			</ShowCase>
+            <h2 class="text-2xl font-bold">Alert error with list</h2>
+			<ShowCase>
+                <div id="toast-default" class="flex w-full max-w-fit px-4 py-3 text-red-800 bg-red-300/20 rounded-md shadow dark:text-red-500 dark:bg-red-300/30" role="alert">
+                    <div class="inline-flex items-center justify-center flex-shrink-0 size-5 text-red-400 rounded-full dark:text-red-300">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-xbox-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10 -10 10s-10 -4.477 -10 -10s4.477 -10 10 -10m3.6 5.2a1 1 0 0 0 -1.4 .2l-2.2 2.933l-2.2 -2.933a1 1 0 1 0 -1.6 1.2l2.55 3.4l-2.55 3.4a1 1 0 1 0 1.6 1.2l2.2 -2.933l2.2 2.933a1 1 0 0 0 1.6 -1.2l-2.55 -3.4l2.55 -3.4a1 1 0 0 0 -.2 -1.4" /></svg>
+                        <span class="sr-only">Close icon</span>
+                    </div>
+                    <span class="px-4 mr-4 text-sm font-normal">There were 2 errors with your submission
+                        <ul class="list-disc ml-8 pt-2">
+                            <li class="text-sm text-red-800 dark:text-red-500">You must enter a valid email address</li>
+                            <li class="text-sm text-red-800 dark:text-red-500">You must accept the terms and conditions</li>
+                        </ul>
+                    </span>
+                   
+                    <button type="button" class="ms-auto -mx-1.5 -my-1.5 text-red-600 rounded-lg focus:ring-2 focus:ring-red-600 dark:focus:ring-red-300 p-1.5 hover:bg-red-500/20 inline-flex items-center justify-center size-7 dark:text-red-300 dark:bg-transparent dark:hover:bg-red-500/10 " data-dismiss-target="#toast-default" aria-label="Close">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                    </button>
+                </div>
 			</ShowCase>
 		</SectionContainer>
 </LayoutDocs>
