@@ -1,0 +1,22 @@
+---
+import SectionContainer from "../../../components/SectionContainer.astro";
+import TailwindBadge from "../../../components/TailwindBadge.astro";
+import LayoutDocs from "../../../layouts/LayoutDocs.astro";
+import ShowCase from "../../../components/ShowCase.astro";
+---
+
+<LayoutDocs title="RaidrUI | Docs - Get Started" description="Get Started">
+    <main class="px-4 w-full">
+		<SectionContainer class="py-20 md-py-36 flex flex-col gap-y-4">
+			<h1 class="text-4xl font-bold text-start">Alerts</h1>
+			<TailwindBadge />
+			<p class="text-gray-400">The alert component can be used to provide information to your users such as success or error messages, but also highlighted information complementing the normal flow of paragraphs and headers on a page.</p>
+			<h2 class="text-2xl font-bold">Usage</h2>
+			<ShowCase>
+				<span class="inline-flex items-center justify-center gap-2 px-4 py-1 space-x-2 text-sm text-black dark:text-white transition bg-gray-200 dark:bg-gray-800 group max-w-fit rounded-full">Primary</span>
+				<span class="inline-flex items-center justify-center gap-2 px-4 py-1 space-x-2 text-sm text-green-800 dark:text-green-300 transition bg-green-200 dark:bg-green-800 group max-w-fit rounded-full">Green</span>
+				<span class="inline-flex items-center justify-center gap-2 px-4 py-1 space-x-2 text-sm text-yellow-800 dark:text-yellow-300 transition bg-yellow-200 dark:bg-yellow-800 group max-w-fit rounded-full">Yellow</span>
+				<span class="inline-flex items-center justify-center gap-2 px-4 py-1 space-x-2 text-sm text-red-800 dark:text-red-300 transition bg-red-200 dark:bg-red-800 group max-w-fit rounded-full">Red</span>
+			</ShowCase>
+		</SectionContainer>
+</LayoutDocs>

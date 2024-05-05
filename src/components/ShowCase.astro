@@ -1,16 +1,34 @@
 ---
-import ClipboardIcon from "./icons/Clipboard.astro"
+import ClipboardIcon from "./icons/Clipboard.astro";
 ---
 
 <div class="w-full px-5">
-    <nav class="flex gap-x-5 mb-5">
-        <h3 class="text-gray-400">Preview</h3>
-        <h3 class="inline-flex items-center gap-x-3 text-gray-400 hover:text-blue-500 cursor-pointer">
-            Copy code
-            <ClipboardIcon class="size-5" />
-        </h3>
-    </nav>
-    <div class="flex border rounded-xl dark:border-slate-600 px-10 py-6 gap-4">
-        <slot />
-    </div>
+  <nav class="flex gap-x-5 mb-5">
+    <h3 class="text-gray-400">Preview</h3>
+    <h3
+      id="copy-code"
+      onclick="copyCode(this)"
+      class="inline-flex items-center gap-x-3 text-gray-400 hover:text-blue-500 cursor-pointer"
+    >
+      <span>Copy code</span>
+      <ClipboardIcon class="size-5" />
+    </h3>
+  </nav>
+  <div
+    class="flex border rounded-xl dark:border-slate-600 px-10 py-6 gap-4"
+  >
+    <slot />
+  </div>
 </div>
+
+<script is:inline>
+  function copyCode(copyButton) {
+    const codeSlot = copyButton.parentNode.nextElementSibling;
+    const copyText = copyButton.querySelector('span');
+    if (codeSlot) {
+        codeSlot.innerHTML = codeSlot.innerHTML.replace(/ data-astro-[^=]*="[^"]*"/g, '');
+        navigator.clipboard.writeText(codeSlot.innerHTML);
+        copyText.innerHTML = "Copied!";
+    }
+  }
+</script>
