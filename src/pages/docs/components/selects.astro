@@ -13,10 +13,19 @@ import ShowCase from "../../../components/ShowCase.astro";
 			<p class="text-gray-400">The select input component can be used to gather information from users based on multiple options in the form of a dropdown list and by browsing this page you will find multiple options, styles, sizes, and variants built with the utility classes from Tailwind CSS also available in dark mode.</p>
 			<h2 class="text-2xl font-bold">Input field</h2>
 			<ShowCase>
-                <div class="w-3/4">
-                    <label class="block mb-2 text-normal font-medium text-gray-900 dark:text-white">Username</label>
-                    <input type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required />
-                </div>
+				<form class="w-3/4">
+					<label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+					<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+					  <option class="w-fit">Choose a country</option>
+					  <option class="w-fit" value="US">United States</option>
+					  <option class="w-fit" value="CA">Canada</option>
+					  <option class="w-fit" value="FR">France</option>
+					  <option class="w-fit" value="DE">Germany</option>
+					</select>
+				</form>
+			</ShowCase>
+			<ShowCase>
+
 			</ShowCase>
 		</SectionContainer>
 </LayoutDocs>
