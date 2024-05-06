@@ -1,0 +1,33 @@
+---
+import SectionContainer from "../../../components/SectionContainer.astro";
+import TailwindBadge from "../../../components/TailwindBadge.astro";
+import LayoutDocs from "../../../layouts/LayoutDocs.astro";
+import ShowCase from "../../../components/ShowCase.astro";
+---
+
+<LayoutDocs title="RaidrUI | Docs - Get Started" description="Get Started">
+    <main class="px-4 w-full">
+		<SectionContainer class="py-20 md-py-36 flex flex-col gap-y-4">
+			<h1 class="text-4xl font-bold text-start">Cards</h1>
+			<TailwindBadge />
+			<p class="text-gray-400">Use these responsive card components to show data entries and information to your users in multiple forms and contexts such as for your blog, application, user profiles, and more.</p>
+			<h2 class="text-2xl font-bold">Usage</h2>
+			<ShowCase>
+                <a href="#" class="flex flex-col max-w-sm p-4 gap-y-2 rounded-lg transition duration-500 ease-in-out transform  overflow-clip sm:rounded-xl scale-105 hover:scale-100">
+                    <img class="p-2 object-cover object-top w-full h-56 rounded-xl transition duration-500 sm:h-full scale-105 hover:scale-100" src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Shoes Image" loading="lazy">
+                    <p class="font-medium text-normal text-yellow-700 dark:text-yellow-800">Product for Men.</p>
+                    <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noke Aor Challenge</h5>
+                    <p class="font-normal text-sm text-gray-700 dark:text-gray-400">New shoes for this 2024.</p>
+                </a>
+			</ShowCase>
+            <h2 class="text-2xl font-bold">Card with outline</h2>
+			<ShowCase>
+                <a href="#" class="flex flex-col max-w-sm p-6 gap-y-2 rounded-lg shadow dark:shadow-gray-300 transition duration-500 ease-in-out transform  overflow-clip sm:rounded-xl scale-105 hover:scale-100">
+                    <img class="object-cover object-top w-full h-56 rounded-xl transition duration-500 sm:h-full" src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Shoes Image" loading="lazy">
+                    <p class="font-medium text-normal text-yellow-700 dark:text-yellow-800">Product for Men.</p>
+                    <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noke Aor Challenge</h5>
+                    <p class="font-normal text-sm text-gray-700 dark:text-gray-400">New shoes for this 2024.</p>
+                </a>
+			</ShowCase>
+		</SectionContainer>
+</LayoutDocs>
